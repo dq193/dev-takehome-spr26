@@ -32,3 +32,27 @@
 # Notes
 
 <!-- Notes go here -->
+The two `GET` requirements are merged into one request, where `status` and `page` are both optional arguments.
+
+`PUT` supports two request bodies. One is from the requirements:
+```
+{
+  requestorName: "Jane Doe",
+  itemRequested: "Flashlights"
+}
+```
+The other contains one array field, `newRequests`, to support insertion of many:
+```
+{
+  newRequests: [
+    {
+      requestorName: "...",
+      itemRequested: "..."
+    },
+    ...
+  ]
+}
+```
+
+`PATCH` supports both a single ID and array of IDs to modify multiple documents at once. The same is true for `DELETE`.
+ 

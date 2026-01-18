@@ -1,13 +1,20 @@
+import Graph from "@/components/atoms/Graph";
+
 export default function Kewl() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-primary text-white gap-5">
-      {/* 
-      Write something unique about you here! 
-      It could be a club you're part of, a weird skill you have, or something special that happened to you.
-      Feel free to put links, images, whatever! 
-      Don't worry about styling- we aren't grading you on this- it's just to get to know you better! :) 
-      */}
-      😎😎😎
-    </div>
+    <main className="min-h-screen bg-black text-slate-100 p-8">
+      <section className="max-w-5xl mx-auto space-y-6">
+        <h1 className="text-4xl font-bold">
+          My Hobbies, Visualized
+        </h1>
+
+        <p className="text-slate-400 max-w-2xl">
+          Here's a cool way I found to show all my various interests in a fun manner.
+          The graph is made using the 'd3' package. Nodes can be dragged and you can hover over them to see a tooltip.
+        </p>
+
+        <Graph />
+      </section>
+    </main>
   );
 }
